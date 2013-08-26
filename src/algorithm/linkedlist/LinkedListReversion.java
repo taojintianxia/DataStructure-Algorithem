@@ -1,65 +1,65 @@
-
 package algorithm.linkedlist;
 
 /**
- *
+ * 
  * @author Kane.Sun
  */
 public class LinkedListReversion {
 
-    public static void main(String... args) {
+	public static void main(String... args) {
 
-        LinkedListReversion testLink = new LinkedListReversion();
-        testLink.push("1");
-        testLink.push("2");
-        testLink.push("3");
-        testLink.push("4");
-        revertLinkedList(testLink);
-    }
+		LinkedListReversion testLink = new LinkedListReversion();
+		testLink.push("1");
+		testLink.push("2");
+		testLink.push("3");
+		testLink.push("4");
+		revertLinkedList(testLink);
+	}
 
-    public static void revertLinkedList(LinkedListReversion linkedList) {
-        LinkedListReversion newPointer = new LinkedListReversion();
-        while(!linkedList.isEmpty()){
-            newPointer.push(linkedList.pop());
-        }
-        System.out.println(newPointer.pop());
-    }
+	public static void revertLinkedList(LinkedListReversion linkedList) {
+		LinkedListReversion newPointer = new LinkedListReversion();
+		while (!linkedList.isEmpty()) {
+			newPointer.push(linkedList.pop());
+		}
+		System.out.println(newPointer.pop());
+	}
 
-    private class Pointer {
+	private class Pointer {
 
-        String name = "";
-        Pointer next;
-    }
+		String name = "";
+		Pointer next;
+	}
 
-    public LinkedListReversion() {
-        first = new Pointer();
-    }
-    private Pointer first = new Pointer();
+	public LinkedListReversion() {
+		first = new Pointer();
+	}
 
-    public boolean isEmpty() {
+	private Pointer first = new Pointer();
 
-        return first.next == null;
-    }
+	public boolean isEmpty() {
 
-    public String pop() {
+		return first.next == null;
+	}
 
-        String s = new String();
+	public String pop() {
 
-        if (!isEmpty()) {
-            s = first.name;
-            first = first.next;
-        } else {
-            //throw Exception
-            System.out.println("System is throwsing Exception");
-        }
+		String s = new String();
 
-        return s;
-    }
+		if (!isEmpty()) {
+			s = first.name;
+			first = first.next;
+		} else {
+			// throw Exception
+			System.out.println("System is throwsing Exception");
+		}
 
-    public void push(String name) {
-        Pointer newPoint = new Pointer();
-        newPoint.next = first;
-        newPoint.name = name;
-        first = newPoint;
-    }
+		return s;
+	}
+
+	public void push(String name) {
+		Pointer newPoint = new Pointer();
+		newPoint.next = first;
+		newPoint.name = name;
+		first = newPoint;
+	}
 }
