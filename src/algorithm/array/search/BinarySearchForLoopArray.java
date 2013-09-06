@@ -19,6 +19,13 @@ public class BinarySearchForLoopArray {
 	private final static int N = 7;
 
 	public static void main(String... args) {
+		for (int i = 0; i < 10; i++) {
+			testMethod();
+			System.out.println();
+		}
+	}
+
+	public static void testMethod() {
 		List<Integer> tmpList = new ArrayList<>();
 		int length = N;
 		int start = N;
@@ -54,17 +61,10 @@ public class BinarySearchForLoopArray {
 			}
 
 			if (firstElement > targetList.get(index)) {
-				if (targetList.get(index - 1) > firstElement) {
-					break;
-				}
-				indexBack = index;
+				indexBack = index - 1;
 				index -= (index - indexFoward) / 2;
 			} else {
-				if (targetList.get(index + 1) < firstElement) {
-					index++;
-					break;
-				}
-				indexFoward = index;
+				indexFoward = index + 1;
 				index += (indexBack - index) / 2;
 			}
 			counter++;
