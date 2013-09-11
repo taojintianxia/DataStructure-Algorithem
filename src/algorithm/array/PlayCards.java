@@ -26,7 +26,7 @@ import java.util.List;
 
 public class PlayCards {
 	public static void main(String... args) {
-		String[] input = new String[] { "A","A", "B", "C"};
+		String[] input = new String[] { "A", "A", "B", "C", "D", "D", "E", "F", "G", "H", "I", "L", "M", "N" };
 		List<String> targetList = new ArrayList<>();
 		targetList.addAll(Arrays.asList(input));
 		Collections.sort(targetList);
@@ -62,7 +62,7 @@ public class PlayCards {
 				counter++;
 				i++;
 			}
-			if (counter > 1) {
+			if (counter > 2) {
 				for (int x = 0; x < counter; x++) {
 					System.out.print(targetList.get(0) + "-");
 					targetList.remove(0);
