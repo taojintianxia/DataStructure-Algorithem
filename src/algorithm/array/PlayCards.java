@@ -41,7 +41,7 @@ public class PlayCards {
 				result = 1;
 				break;
 			}
-			if (!(releaseDuplicateCombination(targetList) || removeMaxmiumSubArray(targetList)))
+			if (!(releaseDuplicateCombination(targetList) || removeMaximumSubArray(targetList)))
 				break;
 		}
 		if (!targetList.isEmpty()) {
@@ -50,7 +50,7 @@ public class PlayCards {
 		return result;
 	}
 
-	private static boolean removeMaxmiumSubArray(List<String> targetList) {
+	private static boolean removeMaximumSubArray(List<String> targetList) {
 		boolean result = false;
 		if (targetList.size() < 2) {
 			System.out.println("mei xi le");

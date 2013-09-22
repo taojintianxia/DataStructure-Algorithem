@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 /**
  * 
  * @author Kane.Sun
@@ -14,11 +18,24 @@ public class KaneUtil {
 	private static final int DEFAULT_INT_ARRAY_SCOPE = 100;
 	private static Random random = new Random();
 
+	/**
+	 * generate a int array with length
+	 * 
+	 * @param length
+	 * @return
+	 */
 	public static int[] generateRandomIntArray(int length) {
 
 		return generateRandomIntArray(length, DEFAULT_INT_ARRAY_SCOPE);
 	}
 
+	/**
+	 * generate a int array with length , and the scope of the element
+	 * 
+	 * @param length
+	 * @param scope
+	 * @return
+	 */
 	public static int[] generateRandomIntArray(int length, int scope) {
 
 		int[] tempIntArray = new int[length];
@@ -30,6 +47,12 @@ public class KaneUtil {
 		return tempIntArray;
 	}
 
+	/**
+	 * generate random String
+	 * 
+	 * @param length
+	 * @return
+	 */
 	public static String generateRamdomString(int length) {
 		StringBuilder strBuilder = new StringBuilder();
 		for (int i = 0; i < length; i++) {
@@ -76,6 +99,13 @@ public class KaneUtil {
 		return tempArray;
 	}
 
+	/**
+	 * anagram is two string contains same char but different order , e.g. abcdb
+	 * is an angram of abbcd
+	 * 
+	 * @param str
+	 * @return
+	 */
 	public static String generateAnagrams(String str) {
 		int length = str.length();
 		char[] charArray = str.toCharArray();
@@ -94,6 +124,12 @@ public class KaneUtil {
 		return strBuilder.toString();
 	}
 
+	/**
+	 * generate a random string contains whitespace
+	 * 
+	 * @param length
+	 * @return
+	 */
 	public static String generateRandomStrWithWhiteSpace(int length) {
 		String str = KaneUtil.generateRamdomString(length);
 		StringBuilder strBuilder = new StringBuilder(str);
@@ -104,5 +140,37 @@ public class KaneUtil {
 		}
 
 		return strBuilder.toString();
+	}
+
+	/**
+	 * generate the rotation string for original String i.e., "waterbottle" is a
+	 * rotation of "erbottlewat"
+	 * 
+	 * @param orgStr
+	 * @return
+	 */
+	public static String generateRotationString(String orgStr) {
+		int index = random.nextInt(orgStr.length() - 2) + 1;
+		StringBuilder strBuilder = new StringBuilder(orgStr.substring(index, orgStr.length()));
+		strBuilder.append(orgStr.substring(0, index));
+
+		return strBuilder.toString();
+	}
+
+	private static void swapString(char[] targetString, int i, int j) {
+		char tmpStr = ' ';
+		tmpStr = targetString[i];
+		targetString[i] = targetString[j];
+		targetString[j] = tmpStr;
+	}
+
+	public static String shuffleString(String targetString) {
+		int length = targetString.length();
+		char[] targetStringArray = targetString.toCharArray();
+		for (int i = 0; i < length; i++) {
+			swapString(targetStringArray, i, random.nextInt(length));
+		}
+
+		return new String(targetStringArray);
 	}
 }
