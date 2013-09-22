@@ -96,6 +96,6 @@ public class NumberMoreThanHalfOfArrayLength {
 			}
 		}
 
-		return targetChar;
+		return targetChar == 0 ? null : targetChar;
 	}
 }
