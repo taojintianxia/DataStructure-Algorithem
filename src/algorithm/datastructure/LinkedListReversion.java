@@ -1,4 +1,4 @@
-package algorithm.linkedlist;
+package algorithm.datastructure;
 
 /**
  * 

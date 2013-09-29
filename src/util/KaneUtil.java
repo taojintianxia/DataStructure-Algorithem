@@ -26,7 +26,7 @@ public class KaneUtil {
 	 */
 	public static int[] generateRandomIntArray(int length) {
 
-		return generateRandomIntArray(length, DEFAULT_INT_ARRAY_SCOPE);
+		return generateRandomIntArray(length, length * 5);
 	}
 
 	/**
@@ -41,7 +41,8 @@ public class KaneUtil {
 		int[] tempIntArray = new int[length];
 		int i = 0;
 		while (i < length) {
-			tempIntArray[i] = (int) (Math.random() * scope);
+			tempIntArray[i] = random.nextInt(scope);
+			i++;
 		}
 
 		return tempIntArray;

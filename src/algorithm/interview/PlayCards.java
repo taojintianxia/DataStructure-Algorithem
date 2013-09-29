@@ -1,4 +1,4 @@
-package algorithm.array;
+package algorithm.interview;
 
 import java.util.ArrayList;
 import java.util.Arrays;

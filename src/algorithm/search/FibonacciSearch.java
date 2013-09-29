@@ -1,4 +1,4 @@
-package algorithm.array.search;
+package algorithm.search;
 
 import util.KaneUtil;
 

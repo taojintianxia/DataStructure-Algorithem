@@ -1,4 +1,4 @@
-package algorithm.array.sort;
+package algorithm.sort;
 
 /**
  * 

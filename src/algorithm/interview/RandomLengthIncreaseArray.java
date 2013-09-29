@@ -1,4 +1,4 @@
-package algorithm.array;
+package algorithm.interview;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

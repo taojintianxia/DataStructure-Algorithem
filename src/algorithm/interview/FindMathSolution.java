@@ -1,4 +1,4 @@
-package algorithm.array;
+package algorithm.interview;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

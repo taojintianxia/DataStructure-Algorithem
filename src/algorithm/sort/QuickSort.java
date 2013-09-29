@@ -1,4 +1,6 @@
-package algorithm.array.sort;
+package algorithm.sort;
+
+import util.KaneUtil;
 
 /**
  * 
@@ -7,7 +9,11 @@ package algorithm.array.sort;
 public class QuickSort {
 
 	public static void main(String... args) {
-		int[] testArray = { 72, 6, 57, 88, 60, 42, 83, 73, 48, 85 };
+		int[] testArray = KaneUtil.generateRandomIntArray(10);
+		for (int i : testArray) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
 		sort(testArray);
 		for (int i : testArray) {
 			System.out.print(i + " ");
