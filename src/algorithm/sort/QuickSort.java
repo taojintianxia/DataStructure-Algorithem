@@ -10,11 +10,14 @@ public class QuickSort {
 
 	public static void main(String... args) {
 		int[] testArray = KaneUtil.generateRandomIntArray(10);
+
 		for (int i : testArray) {
 			System.out.print(i + " ");
 		}
+
 		System.out.println();
 		sort(testArray);
+
 		for (int i : testArray) {
 			System.out.print(i + " ");
 		}

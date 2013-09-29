@@ -1,5 +1,7 @@
 package algorithm.sort;
 
+import util.KaneUtil;
+
 /**
  * 
  * @author Kane.Sun
@@ -7,8 +9,15 @@ package algorithm.sort;
 public class MergeSort {
 
 	public static void main(String... args) {
-		int[] testArray = { 3, 6, 9, 2, 7, 1, 8, 5, 4 };
+		int[] testArray = KaneUtil.generateRandomIntArray(10);
+
+		for (int i : testArray) {
+			System.out.print(i + " ");
+		}
+
+		System.out.println();
 		sort(testArray);
+
 		for (int i : testArray) {
 			System.out.print(i + " ");
 		}
