@@ -2,7 +2,7 @@ package algorithm.interview;
 
 /**
  * requirement : as a number which is more than 1 , could be plus or minus 1 ,or
- * divid 2.need the least steps to conver the number to 1 eg : when the number
+ * divide 2.need the least steps to convert the number to 1 e.g : when the number
  * is 7.we need at least 4 steps as follow
  * 
  * n = 7 n-1 6 n/2 3 n-1 2 n/2 1
@@ -31,7 +31,7 @@ public class ConvertBigNumberToOne {
 			if (num % 2 == 0) {
 				num = num / 2;
 				counter++;
-			} else if ("11".equals(getBinaryEndNumber(num))) {
+			} else if ("11".equals(getLastTwoBinaryNumber(num))) {
 				num++;
 				counter++;
 			} else {
@@ -42,7 +42,7 @@ public class ConvertBigNumberToOne {
 		return counter;
 	}
 
-	private static String getBinaryEndNumber(int number) {
+	private static String getLastTwoBinaryNumber(int number) {
 		String binaryNumber = Integer.toBinaryString(number);
 		return binaryNumber.substring(binaryNumber.length() - 3, binaryNumber.length() - 1);
 	}
