@@ -4,15 +4,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * given an array contains the share price and corresponding time in a whole day
- * to get the best buy and sell time to make the stock maximum
+ * given an array contains the share price and corresponding time in a whole day to get the best buy and sell time to make the stock maximum
  * 
  * @author Kane.Sun
  */
 
 public class MaximizeSharePrice {
-	// I guess we use a map to store the info , key for time , value for share
-	// price
+	// I guess we use a map to store the info , key for time , value for share price
 
 	public static void main(String... args) {
 		Map<String, Integer> sharePrice = new LinkedHashMap<String, Integer>();
