@@ -25,7 +25,7 @@ public class GluttonousSnakeNumber {
 	}
 
 	public static int[][] getMatrix(int level) {
-		if (level < 3) {
+		if (level < 2) {
 			System.out.println("WTF");
 			throw new IllegalArgumentException("NIMEI");
 		}
